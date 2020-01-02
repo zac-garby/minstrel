@@ -7,20 +7,20 @@ While it can't do a *huge* amount at the moment, the aim is to have a DSL that c
 Here are some examples.
 
 ```haskell
-λ> import Music.Minstrel.Notes
-λ> import qualified Music.Minstrel.Intervals as I
-λ> import qualified Music.Minstrel.Scales as S
-λ> import qualified Music.Minstrel.Chords as C
+import Music.Minstrel.Notes
+import qualified Music.Minstrel.Intervals as I
+import qualified Music.Minstrel.Scales as S
+import qualified Music.Minstrel.Chords as C
 
-λ> C.chord C.major (Note E Flat)
-[Eb,G,A#]
+eb = C.chord C.major (Note E Flat)
+-- [Eb,G,A#]
 
-λ> C.chord C.dom7 (Note C Natural)
-[C,E,G,A#]
+c7 = C.chord C.dom7 (Note C Natural)
+-- [C,E,G,A#]
 
-λ> S.scale S.major (Note B Flat)
-[Bb,C,D,Eb,F,G,A]
+bFlatMajorScale = S.scale S.major (Note B Flat)
+-- [Bb,C,D,Eb,F,G,A]
 
-λ> S.scale S.minor (Note C Natural)
-[C,D,Eb,F,G,Ab,Bb]
+cMinorScale = S.scale S.minor (Note C Natural)
+-- [C,D,Eb,F,G,Ab,Bb]
 ```
